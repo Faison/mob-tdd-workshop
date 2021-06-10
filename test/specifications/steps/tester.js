@@ -4,6 +4,7 @@ const exec = util.promisify(child_process.exec);
 
 export default class Tester {
   startClient() {
+    this.appPath = 'src/app.js';
     this.command = '';
     this.output = '';
   }
@@ -18,10 +19,14 @@ export default class Tester {
 
   async submitValues() {
     const { stdout } = await exec(this.command);
-    this.output = parseFloat(stdout) || stdout;
+    this.output = stdout;
   }
 
   assertOutput(expectedOutput) {
     expect(this.output).toEqual(expectedOutput);
+  }
+
+  assertOutputHasMinimumValue(expectedMinimum) {
+    expect(this.output).toContain(`minimum value: ${expectedMinimum}`);
   }
 }
