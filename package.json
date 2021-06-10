@@ -1,0 +1,24 @@
+{
+  "name": "mob-tdd-workshop",
+  "version": "1.0.0",
+  "description": "Mob TDD Workshop",
+  "main": "index.js",
+  "repository": "git@github.com:Faison/mob-tdd-workshop.git",
+  "author": "Faison Zutavern <faison@reaktivstudios.com>",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint src/",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "test:coverage": "yarn test:unit --coverage",
+    "test:unit": "yarn test test/unit",
+    "test:uat": "yarn test test/specifications"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jest": "^27.0.4",
+    "prettier": "^2.3.1"
+  }
+}
