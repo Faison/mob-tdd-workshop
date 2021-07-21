@@ -27,6 +27,6 @@ export default class Tester {
   }
 
   assertOutputHasMinimumValue(expectedMinimum) {
-    expect(this.output).toContain(`minimum value: ${expectedMinimum}`);
+    expect(this.output).toContain(`minimum value = ${expectedMinimum}`);
   }
 }
