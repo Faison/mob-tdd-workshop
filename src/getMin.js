@@ -1,5 +1,5 @@
-const getMin = () => {
-  return -1;
+const getMin = (numbers) => {
+  return Math.min(...numbers);
 };
 
 export default getMin;
