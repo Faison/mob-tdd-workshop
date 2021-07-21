@@ -33,4 +33,8 @@ export default class Tester {
   assertOutputHasMaximumValue(expectedMaximum) {
     expect(this.output).toContain(`maximum value = ${expectedMaximum}`);
   }
+
+  assertOutputHasAverageValue(exepectedAverage) {
+    expect(this.output).toContain(`average value = ${exepectedAverage}`);
+  }
 }

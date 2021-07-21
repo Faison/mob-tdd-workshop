@@ -28,4 +28,18 @@ describe('Statistics', () => {
 
     tester.assertOutputHasMaximumValue(100);
   });
+
+  it('Should provide the average of the values entered', async () => {
+    const tester = new Tester();
+
+    tester.startClient();
+
+    tester.openApp();
+
+    tester.enterValues([1, 2, 3, 4, 5]);
+
+    await tester.submitValues();
+
+    tester.assertOutputHasAverageValue(3);
+  });
 });
