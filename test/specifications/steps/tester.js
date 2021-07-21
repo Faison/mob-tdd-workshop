@@ -29,4 +29,8 @@ export default class Tester {
   assertOutputHasMinimumValue(expectedMinimum) {
     expect(this.output).toContain(`minimum value = ${expectedMinimum}`);
   }
+
+  assertOutputHasMaximumValue(expectedMaximum) {
+    expect(this.output).toContain(`maximum value = ${expectedMaximum}`);
+  }
 }
